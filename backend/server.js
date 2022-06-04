@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use('/api/posts', require('./routes/blogRoutes'))
 app.use('/api/users', require('./routes/userRoutes'))
 
-if (process.env.NODE_ENV === 'production') {
+/* if (process.env.NODE_ENV === 'production') {
 	app.use(express.static(path.join(__dirname, '../frontend/build')))
 
 	app.get('*', (req, res) =>
@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === 'production') {
 	)
 } else {
 	app.get('/', (req, res) => res.send('Please set to production'))
-}
+} */
 
 app.use(errorHandler)
 
