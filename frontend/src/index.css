@@ -1,0 +1,36 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'roboto', sans-serif;
+}
+
+.link {
+	color: white;
+	display: flex;
+	align-items: center;
+}
+
+.link2 {
+	color: white;
+	flex-grow: 1;
+}
+
+.authButtons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.postImg {
+	width: 350px;
+	height: 200px;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.createImg {
+	width: 175px;
+	height: 100px;
+}
