@@ -12,6 +12,8 @@ function CreatePost({ user }) {
 		descr: '',
 		author: user.name,
 	})
+	const [Msg, setMsg] = useState('')
+	const [showMsg, setShowMsg] = useState(false)
 
 	const { title, text, image, descr, author } = formData
 
@@ -42,17 +44,29 @@ function CreatePost({ user }) {
 			const data = await postCall.create(postData, user.token)
 			resetState()
 			navigate(`/posts/${data._id}`)
+			setShowMsg(true)
+			setMsg('Success! Redirecting...')
 		} catch (err) {
 			if (err.response) {
-				console.log(err.response.data.message)
+				console.log(err.response)
+				setShowMsg(true)
+				setMsg(err.response.data.message)
 			} else {
 				console.log(`Error: ${err.message}`)
+				setShowMsg(true)
+				setMsg(err.message)
 			}
 		}
 	}
 
 	return (
 		<>
+			{!user.name ? (
+				<div className='notAuthed'>
+					{' '}
+					You must be logged in to create a post!
+				</div>
+			) : null}
 			<Container
 				maxWidth='xl'
 				sx={{
@@ -129,6 +143,7 @@ function CreatePost({ user }) {
 						>
 							Create
 						</Button>
+						{showMsg ? <div className='notAuthed'>{Msg}</div> : null}
 					</Stack>
 				</Box>
 			</Container>

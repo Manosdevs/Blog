@@ -34,3 +34,9 @@
 	width: 175px;
 	height: 100px;
 }
+
+.notAuthed {
+	color: red;
+	text-align: center;
+	margin-top: 1rem;
+}

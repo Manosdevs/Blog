@@ -74,6 +74,7 @@ function Login(props) {
 						<TextField
 							id='password'
 							name='pass'
+							type='password'
 							onChange={handleChange}
 							value={pass}
 							placeholder='password'

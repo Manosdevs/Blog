@@ -83,7 +83,7 @@ function Register(props) {
 							name='email'
 							onChange={handleChange}
 							value={email}
-							placeholder='email'
+							placeholder='jdoe@gmail.com'
 							required
 						></TextField>
 						<TextField
@@ -91,12 +91,14 @@ function Register(props) {
 							name='pass'
 							onChange={handleChange}
 							value={pass}
+							type='password'
 							placeholder='password'
 							required
 						></TextField>
 						<TextField
 							id='pass2'
 							name='pass2'
+							type='password'
 							onChange={handleChange}
 							value={pass2}
 							placeholder='Confirm Password'

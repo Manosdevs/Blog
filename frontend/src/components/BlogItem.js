@@ -13,12 +13,7 @@ function BlogItem({ title, body, image, descr }) {
 			<Grid item xs={12} sm={6} md={4} sx={{ marginBottom: 2 }}>
 				<Card sx={{ width: 340 }}>
 					<CardActionArea>
-						<CardMedia
-							component='img'
-							height='300'
-							image={image}
-							alt='green iguana'
-						/>
+						<CardMedia component='img' height='300' image={image} alt={title} />
 						<CardContent>
 							<Typography gutterBottom variant='h5' component='div'>
 								{title}

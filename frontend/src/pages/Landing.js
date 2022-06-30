@@ -27,7 +27,7 @@ function Landing({ posts, count, setSkip }) {
 	}
 
 	return (
-		<Container maxWidth='xl' sx={{ marginY: 4 }}>
+		<Container maxWidth='xl' sx={{ marginY: 8 }}>
 			<Grid
 				container
 				rowSpacing={2}
